@@ -1,0 +1,501 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xE7A0E46FAE6C0E5A",
+      "device": "xc7a100tcsg324-1",
+      "gen_directory": "../../../../4bitbarrelshifter.gen/sources_1/bd/design_1",
+      "name": "design_1",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2023.2"
+    },
+    "design_tree": {
+      "hier_0": {
+        "xlslice_1": "",
+        "xlslice_2": "",
+        "xlslice_3": "",
+        "xlslice_0": ""
+      },
+      "xlconcat_0": "",
+      "hier_1": {
+        "mux_0": "",
+        "mux_1": "",
+        "mux_2": "",
+        "mux_3": ""
+      }
+    },
+    "ports": {
+      "win": {
+        "direction": "I",
+        "left": "3",
+        "right": "0"
+      },
+      "sel": {
+        "direction": "I",
+        "left": "1",
+        "right": "0"
+      },
+      "yout": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      }
+    },
+    "components": {
+      "hier_0": {
+        "ports": {
+          "w": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "Dout": {
+            "direction": "O",
+            "left": "0",
+            "right": "0"
+          },
+          "Dout1": {
+            "direction": "O",
+            "left": "0",
+            "right": "0"
+          },
+          "Dout2": {
+            "direction": "O",
+            "left": "0",
+            "right": "0"
+          },
+          "Dout3": {
+            "direction": "O",
+            "left": "0",
+            "right": "0"
+          }
+        },
+        "components": {
+          "xlslice_1": {
+            "vlnv": "xilinx.com:ip:xlslice:1.0",
+            "ip_revision": "3",
+            "xci_name": "design_1_xlslice_0_1",
+            "xci_path": "ip\\design_1_xlslice_0_1\\design_1_xlslice_0_1.xci",
+            "inst_hier_path": "hier_0/xlslice_1",
+            "parameters": {
+              "DIN_FROM": {
+                "value": "1"
+              },
+              "DIN_TO": {
+                "value": "1"
+              },
+              "DIN_WIDTH": {
+                "value": "4"
+              }
+            }
+          },
+          "xlslice_2": {
+            "vlnv": "xilinx.com:ip:xlslice:1.0",
+            "ip_revision": "3",
+            "xci_name": "design_1_xlslice_0_2",
+            "xci_path": "ip\\design_1_xlslice_0_2\\design_1_xlslice_0_2.xci",
+            "inst_hier_path": "hier_0/xlslice_2",
+            "parameters": {
+              "DIN_FROM": {
+                "value": "2"
+              },
+              "DIN_TO": {
+                "value": "2"
+              },
+              "DIN_WIDTH": {
+                "value": "4"
+              }
+            }
+          },
+          "xlslice_3": {
+            "vlnv": "xilinx.com:ip:xlslice:1.0",
+            "ip_revision": "3",
+            "xci_name": "design_1_xlslice_0_3",
+            "xci_path": "ip\\design_1_xlslice_0_3\\design_1_xlslice_0_3.xci",
+            "inst_hier_path": "hier_0/xlslice_3",
+            "parameters": {
+              "DIN_FROM": {
+                "value": "3"
+              },
+              "DIN_TO": {
+                "value": "3"
+              },
+              "DIN_WIDTH": {
+                "value": "4"
+              }
+            }
+          },
+          "xlslice_0": {
+            "vlnv": "xilinx.com:ip:xlslice:1.0",
+            "ip_revision": "3",
+            "xci_name": "design_1_xlslice_0_0",
+            "xci_path": "ip\\design_1_xlslice_0_0\\design_1_xlslice_0_0.xci",
+            "inst_hier_path": "hier_0/xlslice_0",
+            "parameters": {
+              "DIN_WIDTH": {
+                "value": "4"
+              }
+            }
+          }
+        },
+        "nets": {
+          "w_1": {
+            "ports": [
+              "w",
+              "xlslice_0/Din",
+              "xlslice_2/Din",
+              "xlslice_3/Din",
+              "xlslice_1/Din"
+            ]
+          },
+          "xlslice_0_Dout": {
+            "ports": [
+              "xlslice_0/Dout",
+              "Dout3"
+            ]
+          },
+          "xlslice_1_Dout": {
+            "ports": [
+              "xlslice_1/Dout",
+              "Dout"
+            ]
+          },
+          "xlslice_2_Dout": {
+            "ports": [
+              "xlslice_2/Dout",
+              "Dout1"
+            ]
+          },
+          "xlslice_3_Dout": {
+            "ports": [
+              "xlslice_3/Dout",
+              "Dout2"
+            ]
+          }
+        }
+      },
+      "xlconcat_0": {
+        "vlnv": "xilinx.com:ip:xlconcat:2.1",
+        "ip_revision": "5",
+        "xci_name": "design_1_xlconcat_0_0",
+        "xci_path": "ip\\design_1_xlconcat_0_0\\design_1_xlconcat_0_0.xci",
+        "inst_hier_path": "xlconcat_0",
+        "parameters": {
+          "NUM_PORTS": {
+            "value": "4"
+          }
+        }
+      },
+      "hier_1": {
+        "ports": {
+          "i3": {
+            "direction": "I"
+          },
+          "i0": {
+            "direction": "I"
+          },
+          "i1": {
+            "direction": "I"
+          },
+          "i2": {
+            "direction": "I"
+          },
+          "sel": {
+            "direction": "I",
+            "left": "1",
+            "right": "0"
+          },
+          "y": {
+            "direction": "O"
+          },
+          "y1": {
+            "direction": "O"
+          },
+          "y2": {
+            "direction": "O"
+          },
+          "y3": {
+            "direction": "O"
+          }
+        },
+        "components": {
+          "mux_0": {
+            "vlnv": "xilinx.com:module_ref:mux:1.0",
+            "ip_revision": "1",
+            "xci_name": "design_1_mux_0_0",
+            "xci_path": "ip\\design_1_mux_0_0\\design_1_mux_0_0.xci",
+            "inst_hier_path": "hier_1/mux_0",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "mux",
+              "boundary_crc": "0x0"
+            },
+            "ports": {
+              "i0": {
+                "direction": "I"
+              },
+              "i1": {
+                "direction": "I"
+              },
+              "i2": {
+                "direction": "I"
+              },
+              "i3": {
+                "direction": "I"
+              },
+              "sel": {
+                "direction": "I",
+                "left": "1",
+                "right": "0"
+              },
+              "y": {
+                "direction": "O"
+              }
+            }
+          },
+          "mux_1": {
+            "vlnv": "xilinx.com:module_ref:mux:1.0",
+            "ip_revision": "1",
+            "xci_name": "design_1_mux_0_1",
+            "xci_path": "ip\\design_1_mux_0_1\\design_1_mux_0_1.xci",
+            "inst_hier_path": "hier_1/mux_1",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "mux",
+              "boundary_crc": "0x0"
+            },
+            "ports": {
+              "i0": {
+                "direction": "I"
+              },
+              "i1": {
+                "direction": "I"
+              },
+              "i2": {
+                "direction": "I"
+              },
+              "i3": {
+                "direction": "I"
+              },
+              "sel": {
+                "direction": "I",
+                "left": "1",
+                "right": "0"
+              },
+              "y": {
+                "direction": "O"
+              }
+            }
+          },
+          "mux_2": {
+            "vlnv": "xilinx.com:module_ref:mux:1.0",
+            "ip_revision": "1",
+            "xci_name": "design_1_mux_0_2",
+            "xci_path": "ip\\design_1_mux_0_2\\design_1_mux_0_2.xci",
+            "inst_hier_path": "hier_1/mux_2",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "mux",
+              "boundary_crc": "0x0"
+            },
+            "ports": {
+              "i0": {
+                "direction": "I"
+              },
+              "i1": {
+                "direction": "I"
+              },
+              "i2": {
+                "direction": "I"
+              },
+              "i3": {
+                "direction": "I"
+              },
+              "sel": {
+                "direction": "I",
+                "left": "1",
+                "right": "0"
+              },
+              "y": {
+                "direction": "O"
+              }
+            }
+          },
+          "mux_3": {
+            "vlnv": "xilinx.com:module_ref:mux:1.0",
+            "ip_revision": "1",
+            "xci_name": "design_1_mux_0_3",
+            "xci_path": "ip\\design_1_mux_0_3\\design_1_mux_0_3.xci",
+            "inst_hier_path": "hier_1/mux_3",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "mux",
+              "boundary_crc": "0x0"
+            },
+            "ports": {
+              "i0": {
+                "direction": "I"
+              },
+              "i1": {
+                "direction": "I"
+              },
+              "i2": {
+                "direction": "I"
+              },
+              "i3": {
+                "direction": "I"
+              },
+              "sel": {
+                "direction": "I",
+                "left": "1",
+                "right": "0"
+              },
+              "y": {
+                "direction": "O"
+              }
+            }
+          }
+        },
+        "nets": {
+          "mux_0_y": {
+            "ports": [
+              "mux_0/y",
+              "y"
+            ]
+          },
+          "mux_1_y": {
+            "ports": [
+              "mux_1/y",
+              "y1"
+            ]
+          },
+          "mux_2_y": {
+            "ports": [
+              "mux_2/y",
+              "y2"
+            ]
+          },
+          "mux_3_y": {
+            "ports": [
+              "mux_3/y",
+              "y3"
+            ]
+          },
+          "sel_1": {
+            "ports": [
+              "sel",
+              "mux_0/sel",
+              "mux_1/sel",
+              "mux_2/sel",
+              "mux_3/sel"
+            ]
+          },
+          "xlslice_0_Dout": {
+            "ports": [
+              "i3",
+              "mux_0/i0",
+              "mux_1/i3",
+              "mux_2/i2",
+              "mux_3/i1"
+            ]
+          },
+          "xlslice_1_Dout": {
+            "ports": [
+              "i0",
+              "mux_0/i1",
+              "mux_1/i0",
+              "mux_2/i3",
+              "mux_3/i2"
+            ]
+          },
+          "xlslice_2_Dout": {
+            "ports": [
+              "i1",
+              "mux_0/i2",
+              "mux_1/i1",
+              "mux_2/i0",
+              "mux_3/i3"
+            ]
+          },
+          "xlslice_3_Dout": {
+            "ports": [
+              "i2",
+              "mux_0/i3",
+              "mux_1/i2",
+              "mux_2/i1",
+              "mux_3/i0"
+            ]
+          }
+        }
+      }
+    },
+    "nets": {
+      "mux_0_y": {
+        "ports": [
+          "hier_1/y",
+          "xlconcat_0/In0"
+        ]
+      },
+      "mux_1_y": {
+        "ports": [
+          "hier_1/y1",
+          "xlconcat_0/In1"
+        ]
+      },
+      "mux_2_y": {
+        "ports": [
+          "hier_1/y2",
+          "xlconcat_0/In2"
+        ]
+      },
+      "mux_3_y": {
+        "ports": [
+          "hier_1/y3",
+          "xlconcat_0/In3"
+        ]
+      },
+      "sel_1": {
+        "ports": [
+          "sel",
+          "hier_1/sel"
+        ]
+      },
+      "w_1": {
+        "ports": [
+          "win",
+          "hier_0/w"
+        ]
+      },
+      "xlconcat_0_dout": {
+        "ports": [
+          "xlconcat_0/dout",
+          "yout"
+        ]
+      },
+      "xlslice_0_Dout": {
+        "ports": [
+          "hier_0/Dout3",
+          "hier_1/i3"
+        ]
+      },
+      "xlslice_1_Dout": {
+        "ports": [
+          "hier_0/Dout",
+          "hier_1/i0"
+        ]
+      },
+      "xlslice_2_Dout": {
+        "ports": [
+          "hier_0/Dout1",
+          "hier_1/i1"
+        ]
+      },
+      "xlslice_3_Dout": {
+        "ports": [
+          "hier_0/Dout2",
+          "hier_1/i2"
+        ]
+      }
+    }
+  }
+}
